@@ -7,14 +7,24 @@
 //
 
 #import "LLAppDelegate.h"
+#import "LLViewController.h"
 #import <LLTools/LLTools.h>
 
 @implementation LLAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
+    [self.window setRootViewController:[LLViewController new]];
+    
     LLDispatch_after(2, ^{
-        LLAlertView *a = [[LLAlertView alloc] initWithTitle:@"提示" message:@"哈哈哈哈哈哈哈" OKButtonTitle:@"确定" cancelButtonTitle:@"取消" type:LLAlertViewTypeNormal];
+        LLAlertView *a = [[LLAlertView alloc] initWithTitle:@"提示"
+                                                    message:@"恭喜你，集成成功了！"
+                                              OKButtonTitle:@"确定"
+                                          cancelButtonTitle:@"取消"
+                                                       type:LLAlertViewTypeNormal];
         [a showAnimated:YES];
     });
     return YES;
