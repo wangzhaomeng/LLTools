@@ -7,12 +7,16 @@
 //
 
 #import "LLAppDelegate.h"
+#import <LLTools/LLTools.h>
 
 @implementation LLAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    LLDispatch_after(2, ^{
+        LLAlertView *a = [[LLAlertView alloc] initWithTitle:@"提示" message:@"哈哈哈哈哈哈哈" OKButtonTitle:@"确定" cancelButtonTitle:@"取消" type:LLAlertViewTypeNormal];
+        [a showAnimated:YES];
+    });
     return YES;
 }
 
