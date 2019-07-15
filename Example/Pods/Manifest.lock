@@ -1,0 +1,16 @@
+PODS:
+  - LLTools (0.1.0)
+
+DEPENDENCIES:
+  - LLTools (from `../`)
+
+EXTERNAL SOURCES:
+  LLTools:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  LLTools: d3395ff94370fe90aede92634e6ecf65add3c7a7
+
+PODFILE CHECKSUM: 472a259a54fff6aab6a9e1951a06e559df88937a
+
+COCOAPODS: 1.7.4
