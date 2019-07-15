@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '8.0'
+
+target 'LLTools_Example' do
+  pod 'LLTools', :path => '../'
+
+  target 'LLTools_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
